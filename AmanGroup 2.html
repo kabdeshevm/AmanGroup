@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>AMANGROUP — +30% прибыли за 90 дней</title>
+<meta name="description" content="AMANGROUP — AI-консалтинг в Казахстане. Автоматизация продаж, аналитика и внедрение. Бесплатный расчёт выгоды." />
+<meta name="theme-color" content="#214b34" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AMANGROUP — +30% прибыли за 90 дней" />
+<meta property="og:description" content="AI-консалтинг: автоматизация продаж, маркетинг и аналитика под ключ. Бесплатный аудит." />
+<meta property="og:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><rect width='100%' height='100%' fill='%23142d22'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='48' fill='%23F9F295' font-family='Arial'>AMANGROUP</text></svg>" />
+
+<!-- Minimal CSS, mobile-first, adaptive -->
+<style>
+  :root{
+    --bg:#071812;
+    --primary:#214b34;
+    --accent:#F9F295;
+    --cta:#25D366;
+    --glass: rgba(255,255,255,0.04);
+    --muted: rgba(255,255,255,0.7);
+    --radius:14px;
+    --maxw:1100px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:var(--font);background:linear-gradient(180deg,var(--bg),#051110);color:#fff;-webkit-font-smoothing:antialiased}
+  .container{max-width:var(--maxw);margin:0 auto;padding:16px}
+  /* NAV */
+  nav{position:fixed;left:0;right:0;top:10px;z-index:120;display:flex;justify-content:center;pointer-events:auto}
+  .nav-inner{width:100%;max-width:var(--maxw);margin:0 10px;display:flex;align-items:center;gap:12px;padding:8px;border-radius:999px;background:linear-gradient(180deg, rgba(33,75,52,0.86), rgba(26,58,42,0.78));box-shadow:0 8px 30px rgba(0,0,0,0.5);backdrop-filter:blur(6px)}
+  .logo{font-weight:900;color:var(--accent);letter-spacing:.6px}
+  .spacer{flex:1}
+  .nav-links{display:flex;gap:8px}
+  .nav-links a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:12px;font-weight:700;opacity:.95;font-size:14px}
+  .cta-whatsapp{background:linear-gradient(90deg,var(--cta),#128C7E);padding:8px 12px;border-radius:12px;color:#052b20;font-weight:800;text-decoration:none}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:20px;padding:8px;border-radius:8px}
+  /* HERO */
+  .hero{min-height:86vh;display:grid;place-items:center;padding-top:62px;position:relative;overflow:hidden}
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:brightness(.42)}
+  .hero-poster{position:absolute;inset:0;background-image:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.45)), url('https://site.kz/preview.jpg');background-size:cover;background-position:center;z-index:0}
+  .hero-overlay{position:absolute;inset:0;z-index:1}
+  .hero-inner{position:relative;z-index:2;text-align:center;padding:20px}
+  h1{font-size:clamp(26px,6.5vw,48px);margin:0 0 12px;color:var(--accent);line-height:1.02}
+  p.lead{font-size:15px;color:var(--muted);margin:0 0 18px}
+  .hero-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;box-shadow:0 8px 28px rgba(0,0,0,0.3)}
+  .btn-primary{background:linear-gradient(90deg,var(--cta),#128C7E);color:#052b20}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+  /* Sections */
+  .section{padding:56px 16px}
+  .heading{text-align:center;max-width:900px;margin:0 auto 18px}
+  .heading h2{color:var(--accent);font-size:clamp(20px,4vw,30px);margin:0}
+  .heading p{color:var(--muted);margin:8px 0 0}
+  .grid{display:grid;gap:12px}
+  .services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(249,242,149,0.04);box-shadow:0 8px 20px rgba(0,0,0,0.35)}
+  .card h3{margin:0 0 8px;color:var(--accent);font-size:16px}
+  .card p{color:var(--muted);margin:0;font-size:14px}
+  /* Calculator */
+  .calc-wrap{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center}
+  .input{background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);min-width:140px;color:#fff}
+  .result{background:linear-gradient(180deg, rgba(249,242,149,0.06), rgba(249,242,149,0.02));padding:12px;border-radius:10px;color:#08221a;font-weight:800}
+  /* chat */
+  .chat-card{position:fixed;right:16px;bottom:16px;width:340px;max-width:92vw;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#0d3a2b,#083224);box-shadow:0 20px 50px rgba(0,0,0,0.5);z-index:150}
+  .chat-header{display:flex;align-items:center;gap:10px;padding:10px}
+  .chat-body{padding:10px;height:220px;overflow:auto}
+  .chat-input{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(255,255,255,0.03)}
+  .msg{max-width:78%;padding:8px;border-radius:10px;margin-bottom:8px;font-size:14px}
+  .msg.user{background:linear-gradient(90deg,#25D366,#128C7E);color:#04251b;margin-left:auto}
+  .msg.bot{background:rgba(255,255,255,0.03);color:var(--muted)}
+  /* footer */
+  footer{padding:32px 16px;text-align:center;color:rgba(255,255,255,0.6)}
+  /* modal */
+  .modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.6);z-index:300;padding:20px;visibility:hidden;opacity:0;transition:all .2s}
+  .modal.show{visibility:visible;opacity:1}
+  .modal-card{background:linear-gradient(180deg,#0e3a2b,#06321f);padding:18px;border-radius:12px;border:1px solid rgba(249,242,149,0.06);max-width:600px;width:100%}
+  /* small screens */
+  @media (max-width:880px){
+    .nav-links{display:none}
+    .burger{display:inline-flex}
+    .chat-card{right:10px;bottom:10px;width:88vw}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Главное меню">
+  <div class="nav-inner container" role="navigation">
+    <div class="logo">AMANGROUP</div>
+    <div class="spacer"></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Услуги</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#contact">Контакты</a>
+      <a class="cta-whatsapp" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile slide menu -->
+<div id="mobileMenu" style="position:fixed;top:72px;right:12px;background:linear-gradient(180deg,#0e3a2b,#06321f);padding:12px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.5);display:none;z-index:140">
+  <a href="#services" style="display:block;padding:8px 10px;color:#fff;text-decoration:none">Услуги</a>
+  <a href="#cases" style="display:block;padding:8px 10px;color:#fff;text-decoration:none">Кейсы</a>
+  <a href="#calculator" style="display:block;padding:8px 10px;color:#fff;text-decoration:none">Калькулятор</a>
+  <a href="#contact" style="display:block;padding:8px 10px;color:#fff;text-decoration:none">Контакты</a>
+  <a id="waMobile" href="#" style="display:block;padding:8px 10px;color:#052b20;background:linear-gradient(90deg,var(--cta),#128C7E);border-radius:8px;text-decoration:none;margin-top:8px">WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top" aria-label="Главный экран">
+  <!-- Video: lazy loaded when network allows. -->
+  <video id="bgVideo" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://site.kz/preview.jpg" style="display:none">
+    <!-- NOTE: Replace the src with your own CDN link for reliability -->
+    <source src="https://cdn.coverr.co/videos/coverr-abstract-neural-network-1631?token=demo" type="video/mp4">
+  </video>
+  <div id="poster" class="hero-poster" aria-hidden="true"></div>
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-inner container">
+    <h1>+30% прибыли за 90 дней с AI-интеграцией</h1>
+    <p class="lead">Автоматизация продаж, аналитика и процессы — делаем бизнес автономным и прибыльным.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#calculator">Рассчитать выгоду</a>
+      <a class="btn btn-ghost" href="#contact">Бесплатная консультация</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container heading">
+    <h2>Услуги</h2>
+    <p>Реальные кейсы: автоматизация, AI для продаж, аналитика и масштабирование.</p>
+  </div>
+  <div class="container grid services-grid">
+    <div class="card"><h3>AI в продажах</h3><p>Чат-боты, персонализация офферов, автоматизация лидов.</p></div>
+    <div class="card"><h3>Аналитика</h3><p>Dashboard, прогнозирование и отчётность под KPI.</p></div>
+    <div class="card"><h3>Процессы</h3><p>Оптимизация процедур, уменьшение зависимости от владельца.</p></div>
+    <div class="card"><h3>Масштаб</h3><p>Стратегия роста от MVP до устойчивой модели.</p></div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases" class="section">
+  <div class="container heading">
+    <h2>Кейсы</h2>
+    <p>Примеры реальных результатов и экономии для клиентов.</p>
+  </div>
+  <div class="container grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+    <div class="card"><h3>Ритейл</h3><p>+45% маржи через оптимизацию закупок и персонализацию.</p></div>
+    <div class="card"><h3>Сервис</h3><p>-30% затрат через автоматизацию и расписание операторов.</p></div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="section">
+  <div class="container heading">
+    <h2>Калькулятор выгоды</h2>
+    <p>Узнайте прогнозный эффект от внедрения AI.</p>
+  </div>
+  <div class="container">
+    <div class="card" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+      <div style="flex:1;min-width:200px">
+        <div style="margin-bottom:8px"><label class="small">Ежемесячный оборот (₸)</label></div>
+        <input id="turnover" class="input" type="number" placeholder="3000000" value="3000000" />
+        <div style="margin-top:10px"><label class="small">Маржа (%)</label></div>
+        <input id="margin" class="input" type="number" placeholder="20" value="20" />
+        <div style="margin-top:10px"><label class="small">Прирост от AI (%)</label></div>
+        <input id="growth" class="input" type="number" placeholder="30" value="30" />
+        <div style="margin-top:10px"><label class="small">Экономия расходов (%)</label></div>
+        <input id="savings" class="input" type="number" placeholder="15" value="15" />
+        <div style="margin-top:12px"><button id="calcBtn" class="btn btn-primary">Рассчитать</button></div>
+      </div>
+      <div style="min-width:220px;display:flex;flex-direction:column;gap:8px">
+        <div class="result" id="resultRevenue">Ожидаемый прирост прибыли: —</div>
+        <div class="result" id="resultSavings">Ожидаемая экономия: —</div>
+        <div class="result" id="resultTotal">Итоговый эффект: —</div>
+        <a id="calcLead" class="btn btn-ghost" href="#contact" style="text-align:center">Получить аудит</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEA GENERATOR -->
+<section id="idea" class="section">
+  <div class="container heading">
+    <h2>Генератор идей</h2>
+    <p>Опиши нишу — получи 3 действия на следующую неделю.</p>
+  </div>
+  <div class="container">
+    <div class="card">
+      <input id="ideaInput" class="input" placeholder="Например: автосервис — низкая загрузка в будни" />
+      <div style="margin-top:10px;display:flex;gap:8px">
+        <button id="ideaBtn" class="btn btn-primary">Получить 3 шага</button>
+        <button id="ideaCopy" class="btn btn-ghost" style="display:none">Копировать</button>
+      </div>
+      <div id="ideaResult" style="margin-top:10px;display:none;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container heading">
+    <h2>Контакты</h2>
+    <p>Оставьте заявку — получаете быстрый аудит.</p>
+  </div>
+  <div class="container">
+    <form id="contactForm" class="card" style="display:grid;gap:8px">
+      <input name="name" class="input" placeholder="Имя" required />
+      <input name="phone" class="input" placeholder="Телефон (WhatsApp)" required />
+      <input name="company" class="input" placeholder="Компания" />
+      <input name="email" class="input" placeholder="Email" />
+      <textarea name="message" class="input" placeholder="Коротко о задаче" style="min-height:120px"></textarea>
+      <button type="submit" class="btn btn-primary">Отправить и получить аудит</button>
+    </form>
+  </div>
+</section>
+
+<!-- CHAT -->
+<div class="chat-card" id="chat" role="dialog" aria-label="Чат">
+  <div class="chat-header">
+    <div style="width:44px;height:44px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:#052b20;font-weight:900">A</div>
+    <div style="flex:1">
+      <div style="font-weight:900">AMANGROUP AI</div>
+      <div style="font-size:12px;color:var(--muted)">Онлайн-консультант</div>
+    </div>
+    <button id="chatClose" style="background:none;border:0;color:#fff;font-weight:700">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody" aria-live="polite">
+    <div class="msg bot">Привет! Опиши проблему — дам 3 быстрых шага и примерную выгоду.</div>
+  </div>
+  <div class="chat-input">
+    <input id="chatInput" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:#fff" placeholder="Опиши проблему" />
+    <button id="chatSend" class="btn btn-primary">Отправить</button>
+  </div>
+</div>
+
+<!-- Exit modal -->
+<div id="exitModal" class="modal" aria-hidden="true">
+  <div class="modal-card">
+    <h3 style="color:var(--accent);margin-top:0">Подождите — заберите наш PDF</h3>
+    <p style="color:var(--muted)">«10 AI-идей для роста бизнеса» — практическая шпаргалка. Скачайте бесплатно.</p>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button id="downloadPDF" class="btn btn-primary">Скачать PDF</button>
+      <button id="noThanks" class="btn btn-ghost">Нет, спасибо</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div style="font-weight:900;color:var(--accent)">AMANGROUP</div>
+    <div style="color:var(--muted);margin-top:6px">AI-консалтинг — Казахстан</div>
+    <div style="margin-top:10px;color:rgba(255,255,255,0.6)">© <span id="year"></span> AMANGROUP</div>
+  </div>
+</footer>
+
+<!-- Inline scripts: manifest & service worker via Blob for single-file PWA -->
+<script>
+  // Basic UI bindings & logic
+  (function(){
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // WhatsApp links
+    const waNumber = '77010000000';
+    const waHref = (txt)=>'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(txt);
+    document.getElementById('waTop').href = waHref('Здравствуйте, интересует AI аудит');
+    document.getElementById('waMobile').href = waHref('Здравствуйте, интересует AI аудит');
+
+    // Burger menu
+    const burger = document.getElementById('burgerBtn');
+    const mMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', ()=>{ mMenu.style.display = mMenu.style.display==='block' ? 'none' : 'block' });
+
+    // Lazy load video only on good connection
+    const bgVideo = document.getElementById('bgVideo');
+    const poster = document.getElementById('poster');
+    function tryLoadVideo(){
+      try {
+        const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        const saveData = conn && conn.saveData;
+        const downlink = conn && conn.downlink;
+        if(saveData || (downlink && downlink < 1.2)) {
+          // slow: keep poster
+          poster.style.display = 'block';
+          bgVideo.style.display = 'none';
+        } else {
+          // try load video
+          bgVideo.style.display = 'block';
+          poster.style.display = 'none';
+          bgVideo.load();
+        }
+      } catch(e){
+        poster.style.display = 'block';
+      }
+    }
+    tryLoadVideo();
+
+    // Calculator
+    function formatKZT(n){ return Number(n).toLocaleString('ru-RU') + ' ₸'; }
+    document.getElementById('calcBtn').addEventListener('click', ()=>{
+      const turnover = Number(document.getElementById('turnover').value || 0);
+      const margin = Number(document.getElementById('margin').value || 0)/100;
+      const growth = Number(document.getElementById('growth').value || 0)/100;
+      const savings = Number(document.getElementById('savings').value || 0)/100;
+      const profitFromGrowth = turnover * growth * margin;
+      const costSavings = turnover * savings * margin;
+      const totalEffect = profitFromGrowth + costSavings;
+      document.getElementById('resultRevenue').textContent = 'Ожидаемый прирост прибыли: ' + formatKZT(Math.round(profitFromGrowth));
+      document.getElementById('resultSavings').textContent = 'Ожидаемая экономия: ' + formatKZT(Math.round(costSavings));
+      document.getElementById('resultTotal').textContent = 'Итоговый эффект: ' + formatKZT(Math.round(totalEffect));
+      const msg = 'Здравствуйте, хочу аудит. Оборот: ' + turnover + '₸, прогноз: ' + Math.round(totalEffect) + '₸/мес';
+      document.getElementById('calcLead').href = waHref(msg);
+    });
+
+    // Idea generator (simple)
+    document.getElementById('ideaBtn').addEventListener('click', ()=>{
+      const q = (document.getElementById('ideaInput').value || '').trim();
+      const out = document.getElementById('ideaResult');
+      if(!q){ out.style.display='block'; out.textContent='Опишите нишу кратко.'; return; }
+      const steps = [
+        '1) Микро-таргетинг: недорогая реклама на будние дни с оффером.',
+        '2) Автоматизация: бот для записи и напоминаний + цепочки upsell.',
+        '3) Аналитика: сегментация и персональные акции по LTV.'
+      ];
+      out.style.display='block';
+      out.innerHTML = '<strong>3 шага для:</strong> <em>' + escapeHtml(q) + '</em><br><br>' + steps.join('<br>');
+      const copyBtn = document.getElementById('ideaCopy');
+      copyBtn.style.display='inline-flex';
+      copyBtn.onclick = ()=>{ navigator.clipboard && navigator.clipboard.writeText(out.innerText); copyBtn.textContent='Скопировано'; }
+    });
+    function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
+
+    // Chat simulation
+    const chatBody = document.getElementById('chatBody');
+    function appendMsg(text, who){ const d = document.createElement('div'); d.className = 'msg ' + (who==='user'?'user':'bot'); d.textContent = text; chatBody.appendChild(d); chatBody.scrollTop = chatBody.scrollHeight; }
+    document.getElementById('chatSend').addEventListener('click', sendChat);
+    document.getElementById('chatInput').addEventListener('keydown', (e)=>{ if(e.key==='Enter') sendChat(); });
+    document.getElementById('chatClose').addEventListener('click', ()=>document.getElementById('chat').style.display='none');
+    function sendChat(){
+      const v = document.getElementById('chatInput').value.trim();
+      if(!v) return;
+      appendMsg(v,'user');
+      document.getElementById('chatInput').value='';
+      appendMsg('Делаю быстрый анализ...','bot');
+      setTimeout(()=>{
+        appendMsg('1) Быстрый аудит каналов и расходов\n2) Настройка автоответа и квалификации лидов\n3) Пилот на 30 дней с KPI. Прогноз: +20–40% в зависимости от ниши.','bot');
+      },900);
+    }
+
+    // Contact form -> open WhatsApp (demo)
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const text = 'Заявка с сайта\nИмя: '+(fd.get('name')||'')+'\nТел: '+(fd.get('phone')||'')+'\nКомпания: '+(fd.get('company')||'')+'\nЗадача: '+(fd.get('message')||'');
+      window.open(waHref(text),'_blank');
+    });
+
+    // Exit intent
+    let exitShown = false;
+    function showExitModal(){ if(exitShown) return; exitShown=true; const m = document.getElementById('exitModal'); m.classList.add('show'); m.setAttribute('aria-hidden','false'); }
+    document.addEventListener('mouseout', (e)=>{ if(e.clientY < 10) showExitModal(); });
+    document.getElementById('noThanks').addEventListener('click', ()=>{ document.getElementById('exitModal').classList.remove('show'); });
+    document.getElementById('downloadPDF').addEventListener('click', (ev)=>{ ev.preventDefault(); downloadPDF(); document.getElementById('exitModal').classList.remove('show'); });
+
+    function downloadPDF(){
+      // placeholder PDF — replace with real server file for production.
+      const blob = new Blob([generatePDFPlaceholder()], {type:'application/pdf'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = '10-AI-ideas-AMANGROUP.pdf'; a.click();
+      URL.revokeObjectURL(url);
+    }
+    function generatePDFPlaceholder(){
+      return '%PDF-1.4\n%âãÏÓ\n1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R >>\nendobj\n4 0 obj\n<< /Length 55 >>\nstream\nBT /F1 24 Tf 100 700 Td (10 AI-идей для роста бизнеса) Tj ET\nendstream\nendobj\nxref\n0 5\n0000000000 65535 f \n0000000010 00000 n \n0000000060 00000 n \n0000000112 00000 n \n0000000222 00000 n \ntrailer\n<< /Root 1 0 R /Size 5 >>\nstartxref\n334\n%%EOF';
+    }
+
+    // Progressive enhancement: attempt to register PWA assets (manifest & service worker)
+    (async function registerPWA(){
+      try{
+        // create manifest blob
+        const manifest = {
+          name: "AMANGROUP",
+          short_name: "AMANGROUP",
+          description: "AI-консалтинг и автоматизация бизнеса — AMANGROUP",
+          start_url: "/",
+          display: "standalone",
+          background_color: "#071812",
+          theme_color: "#214b34",
+          icons: [
+            { src: "data:image/svg+xml;utf8," + encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"><rect rx="64" width="100%" height="100%" fill="%23142d22"/><g transform="translate(80,80)"><path d="M120 12 L190 250 L50 250 Z" fill="%23F9F295" opacity="0.98"/></g></svg>'
+              ), sizes:"512x512", type:"image/svg+xml" }
+          ]
+        };
+        const manifestBlob = new Blob([JSON.stringify(manifest)], {type:'application/json'});
+        const manifestURL = URL.createObjectURL(manifestBlob);
+        // inject link
+        let link = document.querySelector('link[rel="manifest"]');
+        if(!link){
+          link = document.createElement('link');
+          link.rel = 'manifest';
+          document.head.appendChild(link);
+        }
+        link.href = manifestURL;
+
+        // service worker script as text
+        const swCode = `
+          const CACHE_NAME = 'amangroup-static-v1';
+          const OFFLINE_URL = '/offline.html';
+          const CORE = [
+            '/',
+            // note: single-file, so caching scope will include the document itself
+          ];
+          self.addEventListener('install', (e) => {
+            self.skipWaiting();
+            e.waitUntil((async ()=>{
+              const cache = await caches.open(CACHE_NAME);
+              try {
+                // try to cache the current page response (if available)
+                const req = new Request(location.href, {mode:'no-cors'});
+                await cache.addAll([/* no external */]);
+              } catch(err){
+                // ignore
+              }
+            })());
+          });
+          self.addEventListener('activate', (e) => {
+            e.waitUntil((async ()=>{
+              // cleanup old caches
+              const keys = await caches.keys();
+              await Promise.all(keys.map(k => { if(k !== CACHE_NAME) return caches.delete(k); }));
+              self.clients.claim();
+            })());
+          });
+          self.addEventListener('fetch', (e) => {
+            // Strategy: try network, fallback to cache, then offline fallback
+            const req = e.request;
+            if(req.method !== 'GET') return;
+            e.respondWith((async ()=>{
+              try {
+                const resp = await fetch(req);
+                // optionally update cache for document requests
+                return resp;
+              } catch(err){
+                // network failed - try cache
+                const cache = await caches.open(CACHE_NAME);
+                const cached = await cache.match(req);
+                if(cached) return cached;
+                // if HTML navigation, return a minimal offline response
+                if(req.mode === 'navigate' || (req.headers.get('accept')||'').includes('text/html')){
+                  return new Response('<!doctype html><html><head><meta charset="utf-8"><title>Офлайн</title></head><body style="background:#071812;color:#fff;font-family:Arial, sans-serif;display:flex;align-items:center;justify-content:center;height:100vh"><div style="text-align:center"><h2>Офлайн</h2><p>Похоже, у вас нет соединения. Попробуйте снова позже.</p></div></body></html>', {headers:{'Content-Type':'text/html'}});
+                }
+                return new Response('', {status:503, statusText:'Service Unavailable'});
+              }
+            })());
+          });
+        `;
+        const swBlob = new Blob([swCode], {type:'text/javascript'});
+        const swURL = URL.createObjectURL(swBlob);
+
+        if('serviceWorker' in navigator){
+          // avoid duplicate registration
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          if(registrations && registrations.length){
+            // optionally unregister old non-same-origin sws (best effort)
+            // leave existing if matching.
+          }
+          try {
+            const reg = await navigator.serviceWorker.register(swURL, {scope:'./'});
+            console.log('ServiceWorker registered (blob):', reg.scope);
+          } catch(swErr){
+            console.warn('SW registration failed:', swErr);
+          }
+        } else {
+          console.log('ServiceWorker not supported in this browser.');
+        }
+      } catch(e){
+        console.warn('PWA bootstrap failed', e);
+      }
+    })();
+
+  })();
+</script>
+
+<!-- Notes for deployment -->
+<!--
+IMPORTANT:
+1) To enable full PWA features (install prompt, service worker controlling files) you must serve this file over HTTPS (or localhost).
+   - Quick local test: run `python3 -m http.server 8000` in folder and open http://localhost:8000/index.html
+   - Production: host on Netlify/Vercel or any HTTPS host.
+
+2) Replace the demo video source with your own CDN-hosted MP4 for reliable playback.
+   Replace 'https://cdn.coverr.co/...token=demo' with your real video link.
+
+3) Replace placeholder phone number (waNumber) with the real WhatsApp number in international format.
+
+4) For production offline caching, consider listing critical assets explicitly in the SW CORE array and precaching them server-side.
+
+If что-то не работает — кинь мне лог ошибки (скрин консоли или текст) и я мигом поправлю. 
+Я — Альтер. Делаем как приложение, чтобы ты запускал и продавал.
+-->
+
+</body>
+</html>
